@@ -51,7 +51,10 @@ class Macbeth extends Phaser.Scene {
         this.nextText = this.add.bitmapText(this.NEXT_X, this.NEXT_Y, this.DBOX_FONT, '', this.TEXT_SIZE);
 
         // ready the character dialog images offscreen
-        this.Witch = this.add.sprite(50, this.DBOX_Y+8, 'witch').setOrigin(0, 1);
+        this.Witch_One = this.add.sprite(50, this.DBOX_Y+8, '1witch').setOrigin(0, 1);
+        this.Witch_Two = this.add.sprite(50, this.DBOX_Y+8, '2witch').setOrigin(0, 1);
+        this.Witch_Three = this.add.sprite(50, this.DBOX_Y+8, '3witch').setOrigin(0, 1);
+
 
         // input
         cursors = this.input.keyboard.createCursorKeys();
@@ -108,6 +111,7 @@ class Macbeth extends Phaser.Scene {
             }
             // make text box invisible
             this.dialogbox.visible = false;
+            this.scene.start("macbethScene");
 
         } else {
             // if not, set current speaker
