@@ -51,9 +51,9 @@ class Macbeth extends Phaser.Scene {
         this.nextText = this.add.bitmapText(this.NEXT_X, this.NEXT_Y, this.DBOX_FONT, '', this.TEXT_SIZE);
 
         // ready the character dialog images offscreen
-        this.Witch_One = this.add.sprite(50, this.DBOX_Y+8, '1witch').setOrigin(0, 1);
-        this.Witch_Two = this.add.sprite(50, this.DBOX_Y+8, '2witch').setOrigin(0, 1);
-        this.Witch_Three = this.add.sprite(50, this.DBOX_Y+8, '3witch').setOrigin(0, 1);
+        this.Witch_One = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, '1witch').setOrigin(0, 1);
+        this.Witch_Two = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, '2witch').setOrigin(0, 1);
+        this.Witch_Three = this.add.sprite(this.OFFSCREEN_X, this.DBOX_Y+8, '3witch').setOrigin(0, 1);
 
 
         // input
